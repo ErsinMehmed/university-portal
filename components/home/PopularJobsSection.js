@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import adAction from "@/actions/adAction";
-import AdBox from "@/components/ad/adBox";
+import AdBox from "@/components/ad/AdBox";
 
 const PopularJobsSection = () => {
   const [popularAds, setPopularAds] = useState([]);

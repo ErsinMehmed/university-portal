@@ -316,6 +316,37 @@ const categoriesData = [
   },
 ];
 
+const sortBy = [{ value: "Най-нови" }, { value: "Най-стари" }];
+
+const locations = [
+  { label: "Варна" },
+  { label: "София" },
+  { label: "Бургас" },
+  { label: "Стара Загора" },
+  { label: "Русе" },
+  { label: "Пловдив" },
+  { label: "Велико Търново" },
+  { label: "Габрово" },
+  { label: "Шумен" },
+  { label: "Благоевград" },
+  { label: "Плевен" },
+  { label: "Видин" },
+  { label: "Монтана" },
+  { label: "Смолян" },
+  { label: "Кърджъли" },
+  { label: "Сливен" },
+  { label: "Ямбол" },
+  { label: "Ловеч" },
+  { label: "Кюстендил" },
+  { label: "Петрич" },
+  { label: "Перник" },
+  { label: "Пазарджик" },
+  { label: "Враца" },
+  { label: "Хасково" },
+  { label: "Силистра" },
+  { label: "Добрич" },
+];
+
 export {
   perPageResult,
   statuses,
@@ -332,4 +363,6 @@ export {
   languages,
   employment,
   experience,
+  sortBy,
+  locations,
 };

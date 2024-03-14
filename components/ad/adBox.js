@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import companyImg from "@/public/images/up-logo.png";
 
-const Colors = (props) => {
+const AdBox = (props) => {
   return (
     <div className="border rounded-lg shadow w-full p-4 relative z-0 group/button hover:bg-slate-50 transition-all">
       <button className="absolute top-6 right-6 sm:top-3 sm:right-3 border rounded-full p-1.5 group bg-white sm:bg-transparent group-hover/button:border-gray-300 hover:sm:bg-blue-300 hover:sm:border-blue-300 transition-all z-20 active:sm:scale-95">
@@ -71,4 +71,4 @@ const Colors = (props) => {
   );
 };
 
-export default Colors;
+export default AdBox;

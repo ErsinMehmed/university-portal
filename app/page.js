@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import { commonStore } from "../stores/useStore";
 import Layout from "@/components/layouts/Website";

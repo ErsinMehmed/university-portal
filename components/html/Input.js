@@ -16,6 +16,16 @@ const InputComponent = (props) => {
     setIsVisible(!isVisible);
   };
 
+  const classes = {
+    inputWrapper: [
+      "h-12",
+      "shadow-xl",
+      "bg-white",
+      "hover:bg-slate-50",
+      "focus-within:!bg-white",
+    ],
+  };
+
   return (
     <Input
       size={"sm"}
@@ -32,12 +42,16 @@ const InputComponent = (props) => {
       errorMessage={props.errorMessage}
       placeholder={props.placeholder}
       onChange={handleChange}
+      classNames={props.bgWhite && classes}
+      startContent={props.startContentIcon}
+      isClearable
       endContent={
         props.type == "password" && (
           <button
-            className='focus:outline-none'
-            type='button'
-            onClick={toggleVisibility}>
+            className="focus:outline-none"
+            type="button"
+            onClick={toggleVisibility}
+          >
             {isVisible ? (
               <AiOutlineEye
                 className={`text-2xl ${
