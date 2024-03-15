@@ -59,6 +59,7 @@ function Filter(props) {
                   type="text"
                   label="От"
                   value={props.data.minSalary || ""}
+                  onClear={() => handleInputChange("minSalary", "")}
                   onChange={(value) => handleInputChange("minSalary", value)}
                 />
 
@@ -66,6 +67,7 @@ function Filter(props) {
                   type="text"
                   label="До"
                   value={props.data.maxSalary || ""}
+                  onClear={() => handleInputChange("maxSalary", "")}
                   onChange={(value) => handleInputChange("maxSalary", value)}
                 />
               </div>

@@ -22,6 +22,12 @@ class Ad {
     minSalary: "",
     maxSalary: "",
   };
+  adAdvacedSearchData = {
+    keyword: "",
+    location: "",
+    category: "",
+    position: "",
+  };
   adDataCreate = {
     title: "Заглавие",
     category: "Категория",
@@ -76,6 +82,7 @@ class Ad {
       currentPageSite: observable,
       totalPagesSite: observable,
       totalAdsSite: observable,
+      adAdvacedSearchData: observable,
       setSiteAds: action,
       setAds: action,
       setCurrentPage: action,
@@ -88,6 +95,7 @@ class Ad {
       setCurrentPageSite: action,
       setTotalPagesSite: action,
       setTotalAdsSite: action,
+      setAdAdvacedSearchData: action,
     });
   }
 
@@ -151,6 +159,10 @@ class Ad {
 
   setAdDataCreate = (data) => {
     this.adDataCreate = data;
+  };
+
+  setAdAdvacedSearchData = (data) => {
+    this.adAdvacedSearchData = data;
   };
 
   loadAds = async (newPage) => {

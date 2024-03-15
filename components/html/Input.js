@@ -19,7 +19,7 @@ const InputComponent = (props) => {
   const classes = {
     inputWrapper: [
       "h-12",
-      "shadow-xl",
+      "shadow-lg",
       "bg-white",
       "hover:bg-slate-50",
       "focus-within:!bg-white",
@@ -42,6 +42,7 @@ const InputComponent = (props) => {
       errorMessage={props.errorMessage}
       placeholder={props.placeholder}
       onChange={handleChange}
+      onClear={props.onClear}
       classNames={props.bgWhite && classes}
       startContent={props.startContentIcon}
       isClearable

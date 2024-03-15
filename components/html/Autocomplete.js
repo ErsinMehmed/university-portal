@@ -13,7 +13,19 @@ const SelectComponent = (props) => {
       onInputChange={handleChange}
       onBlur={props.onBlur}
       isInvalid={props.errorMessage ? true : false}
+      placeholder={props.placeholder}
+      inputProps={{
+        classNames: {
+          inputWrapper: props.bgWhite && [
+            "bg-white",
+            "h-12",
+            "shadow-lg",
+            "focus-within:!bg-white",
+          ],
+        },
+      }}
       defaultSelectedKey={props.value}
+      startContent={props.startContentIcon}
       errorMessage={props.errorMessage}
     >
       {props.items?.map((item) => (

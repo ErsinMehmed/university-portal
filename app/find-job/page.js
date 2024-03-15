@@ -94,9 +94,13 @@ const FindJob = () => {
       </div>
 
       <div className="relative grid grid-cols-3 gap-x-8 max-w-screen-2xl mx-auto my-7 px-6 sm:px-8">
-        <SearchSideBar />
+        <div className="hidden lg:block col-span-1">
+          <div className="sticky top-28 bg-[#f5f7fc] rounded-md p-7 text-slate-700">
+            <SearchSideBar />
+          </div>
+        </div>
 
-        <div className="col-span-3 md:col-span-2 space-y-6">
+        <div className="col-span-3 lg:col-span-2 space-y-6">
           <div className="flex justify-end">
             <div className="w-full md:w-1/2 xl:w-1/3">
               <Select

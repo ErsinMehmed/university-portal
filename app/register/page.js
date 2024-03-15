@@ -65,6 +65,7 @@ const Register = () => {
                 }
                 value={userData.name}
                 errorMessage={errorFields.name}
+                onClear={() => handleInputChange("name", "")}
                 onChange={(value) => handleInputChange("name", value)}
               />
 
@@ -74,6 +75,7 @@ const Register = () => {
                   label="Дата на раждане"
                   value={userData.birthday}
                   errorMessage={errorFields.birthday}
+                  onClear={() => handleInputChange("birthday", "")}
                   onChange={(value) => handleInputChange("birthday", value)}
                 />
               )}
@@ -84,6 +86,7 @@ const Register = () => {
                   label="Град"
                   value={userData.city}
                   errorMessage={errorFields.city}
+                  onClear={() => handleInputChange("city", "")}
                   onChange={(value) => handleInputChange("city", value)}
                 />
               )}
@@ -94,6 +97,7 @@ const Register = () => {
                   label="ДДС номер"
                   value={userData.vat_number}
                   errorMessage={errorFields.vat_number}
+                  onClear={() => handleInputChange("vat_number", "")}
                   onChange={(value) => handleInputChange("vat_number", value)}
                 />
               )}
@@ -103,6 +107,7 @@ const Register = () => {
                 label="Имейл"
                 value={userData.email}
                 errorMessage={errorFields.email}
+                onClear={() => handleInputChange("email", "")}
                 onChange={(value) => handleInputChange("email", value)}
               />
 
