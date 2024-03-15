@@ -32,7 +32,6 @@ import adProfileImg from "@/public/images/ad-profile-logo.png";
 import EditableBadge from "@/components/ad/showEditCreate/EditableBadge";
 import EditableSection from "@/components/ad/showEditCreate/EditableSection";
 import Tooltip from "@/components/Tooltip";
-import Colors from "@/components/Colors";
 import Select from "@/components/html/Select";
 import {
   dashboardCategories,
@@ -1000,7 +999,6 @@ const ShowEditCreate = (props) => {
           </div>
         </div>
       </div>
-      <Colors />
     </div>
   );
 };

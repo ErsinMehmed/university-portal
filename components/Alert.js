@@ -22,7 +22,7 @@ const Alert = () => {
       };
     }
   }, [errorMessage, successMessage, handleHideAlert]);
-  console.log(errorMessage);
+
   return (
     (successMessage || errorMessage) && (
       <motion.div

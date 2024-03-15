@@ -10,6 +10,7 @@ import Layout from "@/components/layouts/Website";
 import AdBox from "@/components/ad/AdBox";
 import Select from "@/components/html/Select";
 import SearchSideBar from "@/components/find-job/SearchSideBar";
+import { commonStore } from "@/stores/useStore";
 import { sortBy } from "@/app/data";
 
 const FindJob = () => {
@@ -26,6 +27,7 @@ const FindJob = () => {
   const [isVisible, setIsVisible] = useState(true);
   const observer = useRef();
   const prevScrollY = useRef(0);
+  const { setErrorMessage, setErrorFields } = commonStore;
 
   const lastAdRef = useCallback(
     (node) => {
@@ -70,6 +72,9 @@ const FindJob = () => {
       setIsVisible(!isScrollingDown);
       prevScrollY.current = currentScrollY;
     };
+
+    setErrorMessage("");
+    setErrorFields("");
 
     window.addEventListener("scroll", handleScroll);
 

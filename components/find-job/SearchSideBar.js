@@ -12,8 +12,6 @@ const SearchSideBar = () => {
     setAdAdvacedSearchData({ ...adAdvacedSearchData, [name]: value });
   };
 
-  console.log(adAdvacedSearchData);
-
   return (
     <>
       <div className="font-semibold mb-2 ml-0.5">Търси по ключова дума</div>
@@ -30,7 +28,7 @@ const SearchSideBar = () => {
         onChange={(value) => handleInputChange("keyword", value)}
       />
 
-      <div className="font-semibold mb-2 ml-0.5 mt-8">Локация</div>
+      <div className="font-semibold mb-2 ml-0.5 mt-7">Локация</div>
 
       <Autocomplete
         items={locations}
@@ -42,7 +40,7 @@ const SearchSideBar = () => {
         onChange={(value) => handleInputChange("location", value)}
       />
 
-      <div className="font-semibold mb-2 ml-0.5 mt-8">Работна позиция</div>
+      <div className="font-semibold mb-2 ml-0.5 mt-7">Работна позиция</div>
 
       <Autocomplete
         items={workPositions}
@@ -54,7 +52,7 @@ const SearchSideBar = () => {
         onChange={(value) => handleInputChange("position", value)}
       />
 
-      <div className="font-semibold mb-2 ml-0.5 mt-8">Категория</div>
+      <div className="font-semibold mb-2 ml-0.5 mt-7">Категория</div>
 
       <Autocomplete
         items={dashboardCategories}
