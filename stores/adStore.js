@@ -22,7 +22,7 @@ class Ad {
     minSalary: "",
     maxSalary: "",
   };
-  adAdvacedSearchData = {
+  advancedSearchData = {
     keyword: "",
     location: "",
     category: "",
@@ -82,7 +82,7 @@ class Ad {
       currentPageSite: observable,
       totalPagesSite: observable,
       totalAdsSite: observable,
-      adAdvacedSearchData: observable,
+      advancedSearchData: observable,
       setSiteAds: action,
       setAds: action,
       setCurrentPage: action,
@@ -95,7 +95,7 @@ class Ad {
       setCurrentPageSite: action,
       setTotalPagesSite: action,
       setTotalAdsSite: action,
-      setAdAdvacedSearchData: action,
+      setAdvancedSearchData: action,
     });
   }
 
@@ -161,8 +161,8 @@ class Ad {
     this.adDataCreate = data;
   };
 
-  setAdAdvacedSearchData = (data) => {
-    this.adAdvacedSearchData = data;
+  setAdvancedSearchData = (data) => {
+    this.advancedSearchData = data;
   };
 
   loadAds = async (newPage) => {
@@ -226,6 +226,15 @@ class Ad {
       employmentType: "",
       minSalary: "",
       maxSalary: "",
+    };
+  };
+
+  clearAdvancedSearchData = () => {
+    this.advancedSearchData = {
+      keyword: "",
+      location: "",
+      category: "",
+      position: "",
     };
   };
 }

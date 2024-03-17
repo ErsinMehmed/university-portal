@@ -6,60 +6,62 @@ import { locations, dashboardCategories, workPositions } from "@/app/data";
 import { adStore } from "@/stores/useStore";
 
 const SearchSideBar = () => {
-  const { setAdAdvacedSearchData, adAdvacedSearchData } = adStore;
+  const { setAdvancedSearchData, advancedSearchData } = adStore;
 
   const handleInputChange = (name, value) => {
-    setAdAdvacedSearchData({ ...adAdvacedSearchData, [name]: value });
+    setAdvancedSearchData({ ...advancedSearchData, [name]: value });
   };
 
   return (
     <>
-      <div className="font-semibold mb-2 ml-0.5">Търси по ключова дума</div>
+      <div className='font-semibold mb-2 ml-0.5'>Търси по ключова дума</div>
 
       <Input
-        type="text"
+        type='text'
         bgWhite={true}
-        placeholder="Заглавие, фирма, ключова дума"
-        value={adAdvacedSearchData.keyword}
+        placeholder='Заглавие, фирма, ключова дума'
+        value={advancedSearchData.keyword}
         startContentIcon={
-          <CiSearch className="size-5 text-black/50 text-slate-400 pointer-events-none flex-shrink-0" />
+          <CiSearch className='size-5 text-black/50 text-slate-400 pointer-events-none flex-shrink-0' />
         }
         onClear={() => handleInputChange("keyword", "")}
         onChange={(value) => handleInputChange("keyword", value)}
       />
 
-      <div className="font-semibold mb-2 ml-0.5 mt-7">Локация</div>
+      <div className='font-semibold mb-2 ml-0.5 mt-7'>Локация</div>
 
       <Autocomplete
         items={locations}
         bgWhite={true}
-        placeholder="Избери град"
+        value={advancedSearchData.location || ""}
+        placeholder='Избери град'
         startContentIcon={
-          <CiLocationOn className="size-5 text-black/50 text-slate-400 pointer-events-none flex-shrink-0" />
+          <CiLocationOn className='size-5 text-black/50 text-slate-400 pointer-events-none flex-shrink-0' />
         }
         onChange={(value) => handleInputChange("location", value)}
       />
 
-      <div className="font-semibold mb-2 ml-0.5 mt-7">Работна позиция</div>
+      <div className='font-semibold mb-2 ml-0.5 mt-7'>Работна позиция</div>
 
       <Autocomplete
         items={workPositions}
         bgWhite={true}
-        placeholder="Избери позиция"
+        placeholder='Избери позиция'
         startContentIcon={
-          <CiUser className="size-5 text-black/50 text-slate-400 pointer-events-none flex-shrink-0" />
+          <CiUser className='size-5 text-black/50 text-slate-400 pointer-events-none flex-shrink-0' />
         }
         onChange={(value) => handleInputChange("position", value)}
       />
 
-      <div className="font-semibold mb-2 ml-0.5 mt-7">Категория</div>
+      <div className='font-semibold mb-2 ml-0.5 mt-7'>Категория</div>
 
       <Autocomplete
         items={dashboardCategories}
         bgWhite={true}
-        placeholder="Избери категория"
+        value={advancedSearchData.category || ""}
+        placeholder='Избери категория'
         startContentIcon={
-          <CiBoxList className="size-5 text-black/50 text-slate-400 pointer-events-none flex-shrink-0" />
+          <CiBoxList className='size-5 text-black/50 text-slate-400 pointer-events-none flex-shrink-0' />
         }
         onChange={(value) => handleInputChange("category", value)}
       />
